@@ -1,26 +1,148 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111111;
+  --muted: #5c5c5c;
+  --muted-foreground: #6b6b6b;
+  --border: #ebebeb;
+  --border-strong: #d4d4d4;
+  --card: #fafafa;
+  --card-hover: #ffffff;
+  --accent: #1d4ed8;
+  --accent-foreground: #ffffff;
+  --accent-soft: #eff4ff;
+  --accent-muted: #dbe7ff;
+  --ring: #1d4ed8;
+  --shadow: 0 1px 2px rgba(17, 17, 17, 0.04), 0 8px 24px rgba(17, 17, 17, 0.04);
+  --shadow-hover: 0 2px 4px rgba(17, 17, 17, 0.06), 0 16px 40px rgba(17, 17, 17, 0.08);
+  --nav: rgba(255, 255, 255, 0.72);
+  --grid-line: rgba(17, 17, 17, 0.04);
+}
+
+.dark {
+  --background: #09090b;
+  --foreground: #f4f4f5;
+  --muted: #a1a1aa;
+  --muted-foreground: #a1a1aa;
+  --border: #27272a;
+  --border-strong: #3f3f46;
+  --card: #121216;
+  --card-hover: #18181b;
+  --accent: #3b82f6;
+  --accent-foreground: #ffffff;
+  --accent-soft: #172554;
+  --accent-muted: #1e3a8a;
+  --ring: #3b82f6;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 8px 24px rgba(0, 0, 0, 0.25);
+  --shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.4), 0 16px 40px rgba(0, 0, 0, 0.35);
+  --nav: rgba(9, 9, 11, 0.72);
+  --grid-line: rgba(255, 255, 255, 0.04);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-muted: var(--accent-muted);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent-muted);
+  color: var(--foreground);
+}
+
+.font-display {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.container-page {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container-page {
+    padding-inline: 2rem;
+  }
+}
+
+.section-pad {
+  padding-block: 5.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-pad {
+    padding-block: 7.5rem;
+  }
+}
+
+.glass {
+  background: var(--nav);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black 20%, transparent 75%);
+}
+
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-soft {
+  animation: float-soft 6s ease-in-out infinite;
 }

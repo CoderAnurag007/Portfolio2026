@@ -1,0 +1,23 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Anurag Singh",
+  "url": "https://anuragsingh.dev",
+  "email": "mailto:Anuragsinghg999@gmail.com",
+  "jobTitle": "AI Engineer & Full Stack Engineer",
+  "description": "Experienced software engineer building production AI systems, LLM applications, and scalable full-stack platforms.",
+  "sameAs": [
+    "https://github.com/CoderAnurag007",
+    "https://www.linkedin.com/in/anurag-singh-97009b1a0/"
+  ],
+  "knowsAbout": [
+    "Artificial Intelligence",
+    "Large Language Models",
+    "Retrieval Augmented Generation",
+    "Full Stack Development",
+    "Node.js",
+    "React",
+    "Next.js",
+    "Python"
+  ]
+}
