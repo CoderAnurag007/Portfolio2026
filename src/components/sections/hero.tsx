@@ -35,26 +35,26 @@ export function Hero() {
 
             <Reveal delay={0.04}>
               <p className="mb-5 text-xs font-medium uppercase tracking-[0.18em] text-accent">
-                Software Engineer → AI Engineer
+                Software Engineer · Web Accessibility · Full Stack
               </p>
             </Reveal>
 
             <Reveal delay={0.08}>
               <h1 className="font-display text-[2.15rem] font-semibold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-[3.25rem] lg:text-[3.5rem]">
-                I build AI , Products and Systems that ships.
+                I build accessible products and AI systems that ship.
               </h1>
             </Reveal>
 
             <Reveal delay={0.12}>
               <p className="mt-5 text-sm font-medium text-muted sm:text-[15px]">
-                LLMs · RAG · Full Stack · Production Systems
+                React · Next.js · Node.js · LLMs · RAG · WCAG 2.x
               </p>
             </Reveal>
 
             <Reveal delay={0.16}>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg">
-                4+ years shipping scalable software. Now turning that craft into
-                intelligent products people can trust.
+                4+ years shipping production full-stack applications — from
+                accessible UI and REST APIs to LLM integration and AWS deployment.
               </p>
             </Reveal>
 
@@ -95,7 +95,7 @@ export function Hero() {
               />
               <Image
                 src="/images/profile3.jpeg"
-                alt="Anurag Singh, software engineer transitioning into AI and ML"
+                alt="Anurag Singh, software engineer and full stack developer"
                 fill
                 priority
                 className="object-cover object-top"

@@ -49,8 +49,8 @@ export function Contact() {
             <SectionHeading
               align="center"
               eyebrow="Contact"
-              title="Let's Build Something Intelligent."
-              description="Open to AI engineering roles, LLM application work, and teams building production systems with serious craft."
+              title="Let's connect."
+              description="Open to full-stack, accessibility, and AI engineering roles. Based in Rewa, India — available remote."
             />
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/data/site";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { buttonClassName } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -100,7 +99,6 @@ export function Navbar() {
             </ul>
 
             <div className="flex items-center gap-2">
-              <ThemeToggle />
               <a
                 href={siteConfig.resumePath}
                 target="_blank"

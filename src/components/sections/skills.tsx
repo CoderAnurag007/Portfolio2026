@@ -13,11 +13,11 @@ import { Reveal } from "@/components/ui/reveal";
 
 const icons = {
   Languages: Code2,
-  Databases: Database,
-  Backend: Server,
   Frontend: Layout,
+  Backend: Server,
+  Databases: Database,
   "AI & ML": BrainCircuit,
-  Deployment: Rocket,
+  "DevOps & Tools": Rocket,
 } as const;
 
 export function Skills() {
@@ -27,8 +27,8 @@ export function Skills() {
         <Reveal>
           <SectionHeading
             eyebrow="Skills"
-            title="A stack shaped for production AI."
-            description="Grouped by capability — not progress bars. Depth in software engineering, expanding into modern AI systems."
+            title="Skills from production work."
+            description="Full-stack engineering, web accessibility, cloud deployment, and AI integration — grouped by capability."
           />
         </Reveal>
 

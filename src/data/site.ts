@@ -1,12 +1,12 @@
 export const siteConfig = {
   name: "Anurag Singh",
-  title: "Anurag Singh — AI Engineer & Full Stack Engineer",
+  title: "Anurag Singh — Software Engineer | Web Accessibility & Full Stack",
   description:
-    "Experienced software engineer building production AI systems, LLM applications, and scalable full-stack platforms. Transitioning into AI/ML engineering with strong software foundations.",
+    "Full Stack Engineer with 4+ years building production applications using React, Next.js, TypeScript, Node.js, Python, and MongoDB. Experienced in accessible UI, scalable REST APIs, AWS deployments, and LLM integration.",
   url: "https://anuragsingh.dev",
   email: "Anuragsinghg999@gmail.com",
   phone: "+91 6261178107",
-  location: "India",
+  location: "Rewa, India",
   resumePath: "/resume/AnuragSinghResume.pdf",
   links: {
     github: "https://github.com/CoderAnurag007",

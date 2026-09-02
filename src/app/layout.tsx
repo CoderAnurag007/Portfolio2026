@@ -30,9 +30,8 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [
-    "AI Engineer",
-    "ML Engineer",
-    "LLM Applications",
+    "Web Accessibility",
+    "WCAG",
     "Full Stack Engineer",
     "RAG",
     "Anurag Singh",
@@ -72,10 +71,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#09090b" },
-  ],
+  themeColor: "#ffffff",
   width: "device-width",
   initialScale: 1,
 };
@@ -89,7 +85,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${display.variable} ${body.variable} ${mono.variable} h-full scroll-smooth`}
+      className={`${display.variable} ${body.variable} ${mono.variable} h-full scroll-smooth light`}
     >
       <body className="min-h-full bg-background font-sans text-foreground antialiased">
         <script
@@ -101,7 +97,7 @@ export default function RootLayout({
               name: siteConfig.name,
               url: siteConfig.url,
               email: siteConfig.email,
-              jobTitle: "AI Engineer & Full Stack Engineer",
+              jobTitle: "Software Engineer | Web Accessibility & Full Stack Engineer",
               description: siteConfig.description,
               sameAs: [siteConfig.links.github, siteConfig.links.linkedin],
               knowsAbout: [
@@ -118,8 +114,8 @@ export default function RootLayout({
         />
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
-          enableSystem
+          forcedTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           {children}

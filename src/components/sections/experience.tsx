@@ -17,8 +17,8 @@ export function Experience() {
         <Reveal>
           <SectionHeading
             eyebrow="Experience"
-            title="Impact over activity."
-            description="Professional experience is the core of this portfolio. Each role is framed by outcomes — systems shipped, workflows improved, and ownership demonstrated."
+            title="Where I've shipped."
+            description="4+ years building production systems — ecommerce platforms, healthcare products, and AI integrations."
           />
         </Reveal>
 
