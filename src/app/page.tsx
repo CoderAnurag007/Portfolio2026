@@ -1,31 +1,25 @@
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
-import { Hero } from "@/components/sections/hero";
-import { Experience } from "@/components/sections/experience";
-import { Education } from "@/components/sections/education";
-import { AiJourney } from "@/components/sections/ai-journey";
-import { Skills } from "@/components/sections/skills";
-import { Projects } from "@/components/sections/projects";
-import { Impact } from "@/components/sections/impact";
-import { Philosophy } from "@/components/sections/philosophy";
-import { Contact } from "@/components/sections/contact";
+import { Topbar } from "@/components/topbar";
+import { Hero } from "@/components/hero";
+import { Deploys } from "@/components/deploys";
+import { Services } from "@/components/services";
+import { Stack } from "@/components/stack";
+import { Runbook } from "@/components/runbook";
+import { Contact } from "@/components/contact";
+import { Ask } from "@/components/ask";
 
 export default function HomePage() {
   return (
     <>
-      <Navbar />
+      <Topbar />
       <main>
         <Hero />
-        <Experience />
-        <Education />
-        <AiJourney />
-        <Skills />
-        <Impact />
-        <Projects />
-        <Philosophy />
+        <Deploys />
+        <Services />
+        <Stack />
+        <Runbook />
         <Contact />
       </main>
-      <Footer />
+      <Ask />
     </>
   );
 }

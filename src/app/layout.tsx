@@ -1,16 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Figtree, Sora, JetBrains_Mono } from "next/font/google";
-import { ThemeProvider } from "@/components/providers/theme-provider";
+import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import { siteConfig } from "@/data/site";
 import "./globals.css";
 
-const display = Sora({
+const display = Space_Grotesk({
   variable: "--font-display",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
 });
 
-const body = Figtree({
+const body = Inter({
   variable: "--font-body",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -30,12 +29,16 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [
-    "Web Accessibility",
-    "WCAG",
-    "Full Stack Engineer",
-    "RAG",
     "Anurag Singh",
-    "Production AI Systems",
+    "Full Stack Engineer",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Python",
+    "FastAPI",
+    "RAG",
+    "LLM",
+    "E-commerce integrations",
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
@@ -46,14 +49,7 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     siteName: siteConfig.name,
-    images: [
-      {
-        url: "/images/profile3.jpeg",
-        width: 800,
-        height: 1000,
-        alt: siteConfig.name,
-      },
-    ],
+    images: [{ url: "/images/profile3.jpeg", width: 800, height: 1000, alt: siteConfig.name }],
   },
   twitter: {
     card: "summary_large_image",
@@ -61,17 +57,12 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: ["/images/profile3.jpeg"],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: siteConfig.url,
-  },
+  robots: { index: true, follow: true },
+  alternates: { canonical: siteConfig.url },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#ffffff",
+  themeColor: "#07090c",
   width: "device-width",
   initialScale: 1,
 };
@@ -84,10 +75,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      suppressHydrationWarning
-      className={`${display.variable} ${body.variable} ${mono.variable} h-full scroll-smooth light`}
+      className={`${display.variable} ${body.variable} ${mono.variable} h-full`}
     >
-      <body className="min-h-full bg-background font-sans text-foreground antialiased">
+      <body className="min-h-full bg-bg font-sans text-fg antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -97,29 +87,22 @@ export default function RootLayout({
               name: siteConfig.name,
               url: siteConfig.url,
               email: siteConfig.email,
-              jobTitle: "Software Engineer | Web Accessibility & Full Stack Engineer",
+              jobTitle: siteConfig.role,
               description: siteConfig.description,
               sameAs: [siteConfig.links.github, siteConfig.links.linkedin],
               knowsAbout: [
-                "Artificial Intelligence",
-                "Large Language Models",
-                "Retrieval Augmented Generation",
                 "Full Stack Development",
-                "Python",
                 "React",
                 "Next.js",
+                "Node.js",
+                "Python",
+                "Retrieval Augmented Generation",
+                "Large Language Models",
               ],
             }),
           }}
         />
-        <ThemeProvider
-          attribute="class"
-          forcedTheme="light"
-          enableSystem={false}
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

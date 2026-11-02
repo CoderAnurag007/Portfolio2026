@@ -1,121 +1,106 @@
-export type Project = {
+﻿export type Project = {
   id: string;
+  service: string;
   title: string;
   tagline: string;
-  category: string;
+  status: "live" | "repo" | "private";
   year: string;
-  image: string;
+  image?: string;
   description: string;
   highlights: string[];
   tech: string[];
   github?: string;
   demo?: string;
-  featured?: boolean;
 };
 
 export const projects: Project[] = [
   {
     id: "k8s-rag-assistant",
+    service: "svc/rag-assistant",
     title: "Enterprise Agentic Assistant — Kubernetes RAG",
-    tagline: "RAG-powered agent for querying Kubernetes docs in natural language",
-    category: "AI · RAG · Kubernetes",
+    tagline: "Ask Kubernetes docs questions in plain English, get grounded answers.",
+    status: "private",
     year: "2025",
     image: "/images/k8s-rag-assistant.png",
     description:
-      "Enterprise-grade RAG assistant that lets teams query Kubernetes documentation through natural language — with context-aware retrieval and agentic workflows.",
+      "RAG assistant that lets teams query Kubernetes documentation in natural language, with context-aware retrieval and an agentic workflow for multi-step questions.",
     highlights: [
-      "Built RAG pipeline with embeddings and Qdrant for Kubernetes documentation retrieval.",
-      "Integrated LLMs and OpenAI for context-aware, grounded responses.",
-      "Shipped customer-facing React/Node.js interface for the knowledge base.",
-      "Designed agentic workflow for multi-step documentation queries.",
+      "RAG pipeline with embeddings and Qdrant for documentation retrieval.",
+      "OpenAI LLMs for grounded, context-aware answers.",
+      "React / Node.js interface over the knowledge base.",
     ],
-    tech: [
-      "RAG",
-      "LLMs",
-      "OpenAI",
-      "Embeddings",
-      "Qdrant",
-      "AI Agents",
-      "Kubernetes",
-      "React",
-      "Node.js",
+    tech: ["RAG", "OpenAI", "Embeddings", "Qdrant", "AI Agents", "React", "Node.js"],
+  },
+  {
+    id: "reelstudio",
+    service: "svc/reelstudio",
+    title: "ReelStudio — Local Video Editing Toolkit",
+    tagline: "Recorded clip + subtitle file in, finished short-form video out.",
+    status: "private",
+    year: "ongoing",
+    description:
+      "Local-first editor that adds word-timed captions, animated maps, zooms and titles from a JSON cue sheet. Runs fully offline; used to produce reels for the @anuraag.dev Instagram channel.",
+    highlights: [
+      "SRT parser for word-level timing, so no heavy speech-to-text runs on the machine.",
+      "Live preview with cue-sheet validation and insert-at-playhead editing.",
+      "Node.js CLI tools for project setup, rendering and auto-edit.",
     ],
-    featured: true,
+    tech: ["Next.js", "React", "TypeScript", "Remotion", "Node.js", "D3"],
   },
   {
     id: "cancer-diagnose-ai",
+    service: "svc/smart-diagnose",
     title: "AI Cancer Diagnose",
-    tagline: "AI-powered diagnostic tool with dynamic clinical question flows",
-    category: "AI · Healthcare",
+    tagline: "Dynamic clinical question flows powered by Gemini.",
+    status: "live",
     year: "2024",
     image: "/images/cancer-diagnose-ai.png",
     description:
-      "Diagnostic application integrating Google Gemini for dynamic clinical question flows, automated risk analysis, and secure end-to-end data handling.",
+      "Diagnostic app that uses Google Gemini to drive dynamic clinical question flows and automated risk analysis, with secure end-to-end data handling.",
     highlights: [
-      "Integrated Google Gemini API for dynamic clinical question flows and risk analysis.",
-      "Built Node.js backend with API orchestration, validation, and secure data handling.",
-      "Delivered React frontend with Tailwind CSS for a clean clinical UX.",
-      "Connected MongoDB for patient/session data across the full stack.",
+      "Gemini API for adaptive question flows and risk analysis.",
+      "Node.js backend with API orchestration and validation.",
+      "React + Tailwind front end, MongoDB for session data.",
     ],
-    tech: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Tailwind CSS",
-      "Google Gemini API",
-      "Prompt Engineering",
-    ],
+    tech: ["React", "Node.js", "Express", "MongoDB", "Gemini API", "Tailwind CSS"],
     demo: "https://smartdiagnose.vercel.app/",
-    featured: true,
   },
   {
     id: "ayum",
+    service: "svc/ayum",
     title: "Ayum Healthcare Platform",
-    tagline: "Full-stack healthcare platform — zero to production",
-    category: "Healthcare · Full Stack",
-    year: "2022–2023",
+    tagline: "Appointments, lab bookings and reports — zero to production as CTO.",
+    status: "live",
+    year: "2022–23",
     image: "/images/ayum.png",
     description:
-      "End-to-end healthcare platform with accessible UI, REST APIs, WebSockets, authentication, and production deployment — led as CTO.",
+      "Progressive web app for doctor appointments, pathology bookings, home sample collection and online lab reports.",
     highlights: [
-      "Architected full-stack platform with React, Node.js, Express, and MongoDB.",
-      "Implemented WCAG 2.x / WAI-ARIA accessibility across forms, navigation, and controls.",
-      "Built REST APIs, JWT auth, WebSocket features, and secure application workflows.",
-      "Led development, code reviews, testing, and Agile delivery end-to end.",
+      "Booking APIs and data models for clinics, patients and appointments.",
+      "JWT auth, WebSocket features and accessible forms and navigation.",
+      "Ayum Doctor: pharmacy software for prescriptions, billing and inventory.",
+      "Led code reviews, testing and releases in a small founding team.",
     ],
-    tech: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "WebSockets",
-      "Azure",
-      "JWT",
-      "WCAG 2.x",
-      "WAI-ARIA",
-    ],
+    tech: ["Next.js", "React", "Node.js", "MongoDB", "AWS", "JWT", "WebSockets"],
     github: "https://github.com/dwivediom/ayumClient",
     demo: "https://www.ayum.in/",
-    featured: true,
   },
   {
     id: "tourplanner-ai",
+    service: "svc/tourplanner",
     title: "Tourplanner AI",
-    tagline: "Conversational trip planning with AI assistance",
-    category: "LLM Application",
+    tagline: "Plan a trip by talking to it.",
+    status: "live",
     year: "2024",
     image: "/images/tourplan.png",
     description:
-      "Full-stack tour planning product with chatbot-assisted itinerary generation — users explore and refine travel plans through natural conversation.",
+      "Conversational trip planner: users shape destination, budget and preferences through a chat interface that generates itineraries.",
     highlights: [
-      "Built Next.js frontend with conversational UI for guided itinerary creation.",
-      "Integrated chatbot workflows for destination, budget, and preference planning.",
-      "Deployed as a production web application on Vercel.",
+      "Next.js conversational UI for guided itinerary creation.",
+      "Chatbot workflows for destination, budget and preferences.",
     ],
-    tech: ["Next.js", "React", "Node.js", "AI UX", "Vercel"],
+    tech: ["Next.js", "React", "Node.js", "LLM UX"],
     github: "https://github.com/CoderAnurag007/Tourplannerai-Frontend.git",
     demo: "https://tourplannerai.netlify.app/",
-    featured: true,
   },
 ];

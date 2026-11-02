@@ -1,22 +1,22 @@
-export const philosophy = [
+export const runbook = [
   {
-    title: "How I solve problems",
-    body: "I start from the business constraint, not the framework. Clarify the failure mode, define the smallest reliable interface, then iterate with measurable outcomes.",
+    step: "01",
+    title: "Start from the failure mode",
+    body: "Before picking a framework, find out what breaks, for whom, and what it costs. Then build the smallest reliable interface around it.",
   },
   {
-    title: "How I learn",
-    body: "I learn by building. Foundations first — systems, data, and evaluation — then apply them in projects that resemble production constraints.",
+    step: "02",
+    title: "Boring reliability wins",
+    body: "Clear boundaries, idempotent sync jobs, honest error messages. Maintainable beats clever, every time the pager goes off.",
   },
   {
-    title: "How I build scalable systems",
-    body: "Clear boundaries, boring reliability, and extensible design. Prefer maintainable architecture over clever abstractions that only the author understands.",
+    step: "03",
+    title: "AI only where it earns its place",
+    body: "LLMs are leverage on knowledge work, not decoration. Grounded retrieval, evaluation and a fallback path, or it does not ship.",
   },
   {
-    title: "Why AI excites me",
-    body: "AI is leverage on knowledge work. The opportunity is not demos — it is reliable systems that retrieve, reason, and act with software-grade accountability.",
-  },
-  {
-    title: "Production software mindset",
-    body: "Ship what operators can trust: observability, graceful failure, clean contracts, and code that the next engineer can extend without archaeology.",
+    step: "04",
+    title: "Learn by shipping",
+    body: "Foundations first, then a real project with real constraints. ReelStudio, this site and every side project exist because of that habit.",
   },
 ] as const;
