@@ -8,7 +8,7 @@ export const siteConfig = {
   url: "https://anuragsingh-theta.vercel.app",
   email: "anuragsinghg999@gmail.com",
   phone: "+91 6261178107",
-  location: "India · Remote",
+  location: "Noida, Uttar Pradesh, India",
   resumePath: "/resume/Anurag_Singh_Resume.pdf",
   links: {
     github: "https://github.com/CoderAnurag007",

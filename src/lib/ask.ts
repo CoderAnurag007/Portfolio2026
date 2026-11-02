@@ -129,8 +129,8 @@ export const docs: Doc[] = [
     id: "contact",
     source: "contact",
     title: "Contact and hiring",
-    answer: `Email ${siteConfig.email} or call ${siteConfig.phone}. He is based in India and works remotely today. For availability and notice period, email is fastest.`,
-    keywords: "contact hire hiring email phone call reach available availability notice join location remote india relocate salary interview resume cv",
+    answer: `Email ${siteConfig.email} or call ${siteConfig.phone}. He is based in Noida, Uttar Pradesh, India and works remotely today. For availability and notice period, email is fastest.`,
+    keywords: "contact hire hiring email phone call reach available availability notice join location remote india noida delhi ncr uttar pradesh relocate salary interview resume cv",
   },
 ];
 
